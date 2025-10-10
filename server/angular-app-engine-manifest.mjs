@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/ui',
+  basePath: '/angular-git-init',
   supportedLocales: {
   "en-US": ""
 },
