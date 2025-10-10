@@ -1,0 +1,48 @@
+<div class="color-section">
+  <h2>Brand Colors</h2>
+  <div class="color-grid">
+    @for (color of brandColors; track $index) {
+    <div  class="color-card" [class]="color.class">
+      <span class="color-name">{{ color.name }}</span>
+      <span class="color-value">{{ color.value }}</span>
+    </div>
+  }
+  </div>
+</div>
+
+<div class="color-section">
+  <h2>Background Colors</h2>
+  <div class="color-grid">
+    @for (color of backgroundColors; track $index) {
+    <div class="color-card" [class]="color.class">
+      <span class="color-name">{{ color.name }}</span>
+      <span class="color-value">{{ color.value }}</span>
+    </div>
+  }
+  </div>
+</div>
+
+<div class="color-section">
+  <h2>Text Colors</h2>
+  <div class="color-grid text-demo">
+
+    @for (color of textColors; track $index) {
+    <div  class="color-card">
+      <span class="color-name" [class]="color.class">{{ color.name }}</span>
+      <span class="color-value">{{ color.value }}</span>
+    </div>
+  }
+  </div>
+</div>
+
+<div class="color-section">
+  <h2>Status Colors</h2>
+  <div class="color-grid">
+    @for (color of statusColors; track $index) {
+    <div  class="color-card" [class]="color.class">
+      <span class="color-name">{{ color.name }}</span>
+      <span class="color-value">{{ color.value }}</span>
+    </div>
+  }
+  </div>
+</div>

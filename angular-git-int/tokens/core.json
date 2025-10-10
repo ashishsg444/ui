@@ -1,0 +1,89 @@
+{
+  "color": {
+    "brand": {
+      "primary": {
+        "value": "#0052cc",
+        "type": "color",
+        "description": "Primary brand color used for buttons and links"
+      },
+      "secondary": {
+        "value": "#172b4d",
+        "type": "color",
+        "description": "Secondary brand color used for text and icons"
+      }
+    },
+    "background": {
+      "default": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Default background color for app"
+      },
+      "muted": {
+        "value": "#f4f5f7",
+        "type": "color",
+        "description": "Muted background for cards and surfaces"
+      },
+      "inverse": {
+        "value": "#091e42",
+        "type": "color",
+        "description": "Background color for dark theme sections"
+      }
+    },
+    "text": {
+      "default": {
+        "value": "#172b4d",
+        "type": "color",
+        "description": "Primary text color"
+      },
+      "subtle": {
+        "value": "#6b778c",
+        "type": "color",
+        "description": "Subtle text for secondary information"
+      },
+      "inverse": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Text color used on dark backgrounds"
+      },
+      "link": {
+        "value": "{color.brand.primary}",
+        "type": "color",
+        "description": "Text color for hyperlinks"
+      }
+    },
+    "border": {
+      "default": {
+        "value": "#dfe1e6",
+        "type": "color",
+        "description": "Default border color"
+      },
+      "focus": {
+        "value": "{color.brand.primary}",
+        "type": "color",
+        "description": "Focus ring or outline color"
+      }
+    },
+    "status": {
+      "success": {
+        "value": "#36b37e",
+        "type": "color",
+        "description": "Success messages or positive states"
+      },
+      "warning": {
+        "value": "#ffab00",
+        "type": "color",
+        "description": "Warnings or alerts"
+      },
+      "danger": {
+        "value": "#ff5630",
+        "type": "color",
+        "description": "Errors or destructive actions"
+      },
+      "info": {
+        "value": "#0065ff",
+        "type": "color",
+        "description": "Informational messages"
+      }
+    }
+  }
+}
