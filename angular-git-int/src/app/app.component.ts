@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TokenDemoComponent } from './token-demo/token-demo.component';
+import { TokenDemoComponent } from '../token-demo/token-demo.component';
 
 @Component({
     selector: 'app-root',

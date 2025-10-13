@@ -8,7 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular-git-int": "node dist/angular-git-int/server/server.mjs",
-    "build:tokens": "node ./scripts/style-dictionary.config.js"
+    "build:tokens": "node ./scripts/style-dictionary.config.js",
+    "deploy": "ng build --prerender=false --ssr=false --output-path dist/angular-git-int --base-href '/angular-git-int/' && npx angular-cli-ghpages --dir=dist/angular-git-int",
+    "deploy-option": "ng build --output-path dist --base-href '/angular-git-init/' && npx angular-cli-ghpages --dir=dist/angular-git-init",
+    "deploy-ui": "ng build --configuration production --base-href '/ui/' && npx angular-cli-ghpages --dir=dist"
   },
   "private": true,
   "dependencies": {
@@ -28,12 +31,14 @@
     "zone.js": "~0.15.1"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^20.3.5",
     "@angular/build": "^20.3.5",
     "@angular/cli": "^20.3.5",
     "@angular/compiler-cli": "^20.3.4",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
