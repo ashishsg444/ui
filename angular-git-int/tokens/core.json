@@ -90,7 +90,7 @@
         "description": "Errors or destructive actions"
       },
       "info": {
-        "value": "#EE4B2B",
+        "value": "#ec3713",
         "type": "color",
         "description": "Informational messages test"
       }
