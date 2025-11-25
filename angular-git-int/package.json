@@ -11,7 +11,7 @@
     "build:tokens": "node ./scripts/style-dictionary.config.js",
     "deploy": "ng build --prerender=false --ssr=false --output-path dist/angular-git-int --base-href '/angular-git-int/' && npx angular-cli-ghpages --dir=dist/angular-git-int",
     "deploy-option": "ng build --output-path dist --base-href '/angular-git-init/' && npx angular-cli-ghpages --dir=dist/angular-git-init",
-    "deploy-ui": "ng build --configuration production --base-href '/ui/' && npx angular-cli-ghpages --dir=dist"
+    "deploy-ui": "ng build --configuration production --base-href '/ui/' && npx angular-cli-ghpages --dir=dist/ui/browser"
   },
   "private": true,
   "dependencies": {
