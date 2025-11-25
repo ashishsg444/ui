@@ -10,6 +10,16 @@
         "value": "#172b4d",
         "type": "color",
         "description": "Secondary brand color used for text and icons"
+      },
+      "tertiary": {
+        "value": "#039be5",
+        "type": "color",
+        "description": "Tertiary brand color used for text and icons"
+      },
+      "neutral": {
+        "value": "#ab47bc",
+        "type": "color",
+        "description": "Neutral brand color used for text and icons"
       }
     },
     "background": {
@@ -80,9 +90,9 @@
         "description": "Errors or destructive actions"
       },
       "info": {
-        "value": "#0065ff",
+        "value": "#EE4B2B",
         "type": "color",
-        "description": "Informational messages"
+        "description": "Informational messages test "
       }
     }
   }
