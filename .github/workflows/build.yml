@@ -1,40 +1,43 @@
-name: Build and Deploy UI
+# Working code commented to test workflow call from repo A to repo B 26 11 25
 
-on:
-  pull_request:
-    branches: [ main ]
-  push:
-    branches: [ main ]
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+# name: Build and Deploy UI
 
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
+# on:
+#   pull_request:
+#     branches: [ main ]
+#   push:
+#     branches: [ main ]
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
 
-      - name: Install dependencies
-        run: |
-          cd angular-git-int
-          npm install
+#     steps:
+#       - name: Checkout source
+#         uses: actions/checkout@v4
 
-      - name: Build project
-        run: |
-          cd angular-git-int
-          npm run build
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
 
-      # Deploy only when pushing/merging into main
-      - name: Deploy to GitHub Pages
-        if: github.event_name == 'push'
-        run: |
-          cd angular-git-int
-          npm run deploy-ui
+#       - name: Install dependencies
+#         run: |
+#           cd angular-git-int
+#           npm install
 
-      - name: Show trigger
-        run: echo "Triggered by ${{ github.event_name }}"
+#       - name: Build project
+#         run: |
+#           cd angular-git-int
+#           npm run build
+
+#       # Deploy only when pushing/merging into main
+#       - name: Deploy to GitHub Pages
+#         if: github.event_name == 'push'
+#         run: |
+#           cd angular-git-int
+#           npm run deploy-ui
+
+#       - name: Show trigger
+#         run: echo "Triggered by ${{ github.event_name }}"

@@ -1,0 +1,53 @@
+name: Handle Token Update
+
+on:
+  repository_dispatch:
+    types: [tokens-updated]
+
+jobs:
+  update-tokens:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout UI repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd angular-git-int
+          npm install
+
+      - name: Download tokens from Repo A
+        run: |
+          mkdir -p angular-git-int/tokens
+          curl -L https://raw.githubusercontent.com/ashishsg444/design-tokens/main/core.json \
+            -o angular-git-int/tokens/core.json
+          # Add more curl commands here if you have multiple token files
+
+      - name: Run token transform script
+        run: |
+          cd angular-git-int
+          npm run build:tokens
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout -b update-design-tokens-${{ github.run_id }}
+          git add .
+          git commit -m "chore: update design tokens and regenerate CSS/SCSS" || echo "No changes to commit"
+          git push origin HEAD:update-design-tokens-${{ github.run_id }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: update-design-tokens-${{ github.run_id }}
+          title: "chore: update design tokens"
+          body: "This PR updates design tokens and regenerates CSS/SCSS files using build:tokens."
