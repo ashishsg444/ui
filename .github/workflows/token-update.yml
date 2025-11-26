@@ -25,7 +25,7 @@ jobs:
       - name: Download tokens from Repo A
         run: |
           mkdir -p angular-git-int/tokens
-          curl -L https://raw.githubusercontent.com/ashishsg444/design-tokens/main/core.json \
+          curl -L https://raw.githubusercontent.com/ashishsg444/design-token/main/core.json \
             -o angular-git-int/tokens/core.json
           # Add more curl commands here if you have multiple token files
 
