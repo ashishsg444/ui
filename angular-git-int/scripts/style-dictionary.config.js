@@ -1,7 +1,8 @@
 import StyleDictionary from 'style-dictionary';
 
 const config = {
-  source: ['tokens/core.json'], // your JSON file path
+  // source: ['tokens/core.json'], // your JSON file path local run
+  source: ['ui/angular-git-int/tokens/core.json'], // your JSON file path server run
   platforms: {
     scss: {
       transformGroup: 'scss',
