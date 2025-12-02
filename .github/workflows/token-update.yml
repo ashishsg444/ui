@@ -34,10 +34,12 @@ jobs:
           cd angular-git-int
           npm run build:tokens
 
-      - name: Debug git status
+      - name: Stage all changes
         run: |
-          echo "Working directory: $(pwd)"
-          ls -l angular-git-int/tokens
+          git add .
+
+      - name: Debug staged changes
+        run: |
           git status --short
           git diff --stat
 
@@ -50,5 +52,3 @@ jobs:
           title: "chore: update design tokens"
           body: "This PR updates design tokens and regenerates CSS/SCSS files using build:tokens."
           commit-message: "chore: update design tokens and regenerate CSS/SCSS"
-          add-paths: |
-            angular-git-int/tokens/**
