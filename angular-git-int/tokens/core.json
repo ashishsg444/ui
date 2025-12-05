@@ -90,9 +90,9 @@
         "description": "Errors or destructive actions"
       },
       "info": {
-        "value": "#f48772",
+        "value": "#5af273",
         "type": "color",
-        "description": "Informational messages test"
+        "description": "Informational messages"
       }
     }
   }
